@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bolokonondo Records</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app">
+      <header class="site-header">
+        <div class="logo">
+          <img src="assets/logo_v2.jpeg" alt="Bolokonondo Records" class="logo-image" />
+        </div>
+        <nav class="main-nav">
+          <a href="#playlists">Playlists</a>
+          <a href="artists.html">Artistas</a>
+          <a href="#about">Nosotros</a>
+          <a href="#contact">Contacto</a>
+        </nav>
+      </header>
+
+      <!-- Moving banner -->
+      <div class="ticker-bar">
+        <div class="ticker-inner">
+          <div class="ticker-item">
+            <span class="ticker-arrow">➜</span>
+            <span>Bolokonondo Records · Medellín para el mundo</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-arrow">➜</span>
+            <span>Nuevas voces urbanas · Sonido global</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-arrow">➜</span>
+            <span>Afrobeat Mundial · Playlist en Spotify</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-arrow">➜</span>
+            <span>Bolokonondo Records · Medellín para el mundo</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-arrow">➜</span>
+            <span>Nuevas voces urbanas · Sonido global</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero -->
+      <main>
+        <section class="hero" id="top">
+          <div class="hero-logo-bg"></div>
+          <div class="hero-overlay"></div>
+          <div class="hero-media">
+            <div class="hero-media-gradient"></div>
+          </div>
+          <div class="hero-content">
+            <p class="hero-kicker">Medellín · Independent Label</p>
+            <h1 class="hero-title">Bolokonondo<br />Records</h1>
+            <p class="hero-tagline">Ritmos urbanos desde Medellín para el mundo.</p>
+            <div class="hero-cta-row">
+              <a href="#playlists" class="btn btn-primary">Escuchar el sello</a>
+              <button class="btn btn-ghost" type="button">
+                <span class="play-icon">▶</span>
+                Ver teaser
+              </button>
+            </div>
+            <div class="hero-meta">
+              <span>· Nuevas voces urbanas</span>
+              <span>· Sonido global</span>
+              <span>· Energía de barrio</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- Playlists -->
+        <section class="section section-playlists" id="playlists">
+          <div class="section-header">
+            <h2>Playlist destacada</h2>
+            <p>Escucha Afrobeat Mundial, nuestra playlist curada con las mejores canciones del Afrobeat del mundo.</p>
+          </div>
+          <div class="playlist-embed-wrapper">
+            <iframe
+              data-testid="embed-iframe"
+              style="border-radius:12px"
+              src="https://open.spotify.com/embed/playlist/13lqBKfpObl0xtqWJausLz?utm_source=generator"
+              width="100%"
+              height="352"
+              frameborder="0"
+              allowfullscreen
+              allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+              loading="lazy"
+            ></iframe>
+          </div>
+        </section>
+
+        <!-- Artists -->
+        <section class="section section-artists" id="artists">
+          <div class="section-header">
+            <h2>Artistas Bolokonondo</h2>
+            <p>Talento diverso con una misma energía: llevar el sonido urbano más allá de las fronteras.</p>
+          </div>
+          <div class="cards-grid artists-grid">
+            <article class="card artist-card">
+              <div class="artist-photo artist-1"></div>
+              <div class="card-body">
+                <h3>La Nova</h3>
+                <p>Voces suaves sobre beats agresivos. Medellín nocturna en cada barra.</p>
+              </div>
+            </article>
+
+            <article class="card artist-card">
+              <div class="artist-photo artist-2"></div>
+              <div class="card-body">
+                <h3>Mono 13</h3>
+                <p>Trap híbrido y melodías oscuras con visión global.</p>
+              </div>
+            </article>
+
+            <article class="card artist-card">
+              <div class="artist-photo artist-3"></div>
+              <div class="card-body">
+                <h3>Ruta Centro</h3>
+                <p>Colectivo de productores que conectan Medellín con escenas de Londres y NYC.</p>
+              </div>
+            </article>
+
+            <article class="card artist-card">
+              <div class="artist-photo artist-4"></div>
+              <div class="card-body">
+                <h3>KND</h3>
+                <p>Ritmos minimalistas, bajos pesados y letras introspectivas.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section class="section section-about" id="about">
+          <div class="about-inner">
+            <div class="about-text">
+              <h2>Sobre Bolokonondo</h2>
+              <p>
+                Somos un sello independiente enfocado en el género urbano, que piensa desde Medellín para el mundo.
+                Amplificamos artistas que transforman su realidad en sonido y conectamos las calles de la ciudad con la
+                escena global.
+              </p>
+            </div>
+            <div class="about-tagline">
+              <p>Medellín es el punto de partida, nunca el límite.</p>
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <!-- Bottom moving banner -->
+      <div class="ticker-bar">
+        <div class="ticker-inner">
+          <div class="ticker-item">
+            <span class="ticker-arrow">➜</span>
+            <span>Bolokonondo Records · Medellín para el mundo</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-arrow">➜</span>
+            <span>Nuevos lanzamientos cada mes</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-arrow">➜</span>
+            <span>Escucha Afrobeat Mundial en Spotify</span>
+          </div>
+          <div class="ticker-item">
+            <span class="ticker-arrow">➜</span>
+            <span>Bolokonondo Records · Medellín para el mundo</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer -->
+      <footer class="site-footer" id="contact">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <div class="logo logo-footer">Bolokonondo<span>Records</span></div>
+            <p>Sello urbano independiente con base en Medellín y visión global.</p>
+          </div>
+          <div class="footer-links">
+            <h4>Síguenos</h4>
+            <ul>
+              <li>
+                <a
+                  href="https://www.instagram.com/bolokonondo/"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Instagram Bolokonondo Records"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://open.spotify.com/user/31lp4tisnjbgvm7u2oqtk5z3mgci?si=a016996de69a461c"
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Spotify Bolokonondo Records"
+                  >Spotify</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div class="footer-contact">
+            <h4>Contacto</h4>
+            <a href="mailto:bolokonondorecords@gmail.com">bolokonondorecords@gmail.com</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© <span id="year"></span> Bolokonondo Records. Todos los derechos reservados.</p>
+        </div>
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
