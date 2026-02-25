@@ -8,6 +8,10 @@ on:
 jobs:
   ping:
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Curl request
-        run: curl -I https://bolokonondo.com
+        run: |
+          curl --fail --silent --show-error --location --max-time 20 \
+            --output /dev/null \
+            https://bolokonondo.com
