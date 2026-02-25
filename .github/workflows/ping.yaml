@@ -10,8 +10,42 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
-      - name: Curl request
+      - name: Curl request bolokonondo
+        id: bolokonondo
         run: |
-          curl --fail --silent --show-error --location --max-time 20 \
+          set +e
+          HTTP_STATUS=$(curl --silent --show-error --location --max-time 20 \
             --output /dev/null \
-            https://bolokonondo.com
+            --write-out "%{http_code}" \
+            https://www.bolokonondo.com/)
+          CURL_EXIT=$?
+
+          echo "http_status=${HTTP_STATUS}" >> "$GITHUB_OUTPUT"
+          echo "curl_exit=${CURL_EXIT}" >> "$GITHUB_OUTPUT"
+      - name: Curl request papaya
+        id: papaya
+        run: |
+          set +e
+          HTTP_STATUS=$(curl --silent --show-error --location --max-time 20 \
+            --output /dev/null \
+            --write-out "%{http_code}" \
+            https://www.hirepapaya.com/)
+          CURL_EXIT=$?
+
+          echo "http_status=${HTTP_STATUS}" >> "$GITHUB_OUTPUT"
+          echo "curl_exit=${CURL_EXIT}" >> "$GITHUB_OUTPUT"
+      - name: Results
+        if: always()
+        run: |
+          echo "Bolokonondo -> curl_exit=${{ steps.bolokonondo.outputs.curl_exit }}, http_status=${{ steps.bolokonondo.outputs.http_status }}"
+          echo "Hire Papaya -> curl_exit=${{ steps.papaya.outputs.curl_exit }}, http_status=${{ steps.papaya.outputs.http_status }}"
+
+          if [ "${{ steps.bolokonondo.outputs.curl_exit }}" != "0" ] || [ "${{ steps.bolokonondo.outputs.http_status }}" = "000" ]; then
+            echo "Bolokonondo ping failed"
+            exit 1
+          fi
+
+          if [ "${{ steps.papaya.outputs.curl_exit }}" != "0" ] || [ "${{ steps.papaya.outputs.http_status }}" = "000" ]; then
+            echo "Hire Papaya ping failed"
+            exit 1
+          fi
